@@ -52,3 +52,35 @@ void Matrix::populate(){
         }
     }
 }
+
+//Overloaded operators
+
+//A*B
+Matrix Matrix::operator*(const Matrix& m) const{
+    if(size.at(1) != m.size.at(0)){
+        std::cout << "Matrices are incompatible for multiplication" << std::endl;
+        Matrix result(0,0);
+        return result;
+    }else{
+        Matrix result(size.at(0), m.size.at(1));
+        for(int i = 0; i < size.at(0); i++){
+            for(int j = 0; j < m.size.at(1); j++){
+                for(int k = 0; k < size.at(1); k++){
+                    result.data[i][j] += data[i][k] * m.data[k][j];
+                }
+            }
+        }
+        return result;
+    }  
+}
+
+//A*scalar
+Matrix Matrix::operator*(int s) const{
+    Matrix result(size.at(0), size.at(1));
+    for(int i = 0; i < size.at(0); i++){
+        for(int j = 0; j < size.at(1); j++){
+            result.data[i][j] = data[i][j] * s;
+        }
+    }
+    return result;
+}

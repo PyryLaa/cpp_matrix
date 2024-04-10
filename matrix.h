@@ -17,8 +17,8 @@ class Matrix{
 
   //These are not defined yet
 
-  //Matrix operator*(const Matrix& m) const; //Multiply with other matrix
-  //Matrix operator*(double s) const; //Multiply with scalar
+  Matrix operator*(const Matrix& m) const; //Multiply with other matrix
+  Matrix operator*(int s) const; //Multiply with scalar
   //Matrix operator+(Matrix& m);
   //Matrix operator-(Matrix& m);
 
