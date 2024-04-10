@@ -6,7 +6,6 @@
 class Matrix{
  public:
   Matrix(int r, int c);
-  ~Matrix();
   std::array<int, 2> get_size() const;
   int get_rows() const;
   int get_cols() const;
@@ -19,8 +18,8 @@ class Matrix{
 
   Matrix operator*(const Matrix& m) const; //Multiply with other matrix
   Matrix operator*(int s) const; //Multiply with scalar
-  //Matrix operator+(Matrix& m);
-  //Matrix operator-(Matrix& m);
+  Matrix operator+(Matrix& m) const;
+  Matrix operator-(Matrix& m) const;
 
   //Matrix transpose(Matrix& m);
   

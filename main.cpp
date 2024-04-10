@@ -15,12 +15,20 @@ int main(){
     std::cout << "Matrix 2" << std::endl;
     m2.display();
 
-    Matrix m3 = m1*m2;
-    std::cout << "Matrix 3" << std::endl;
+    Matrix m3 = m1 * m2;
+    std::cout << "Matrix 1 * matrix 2" << std::endl;
     m3.display();
-    Matrix m4 = m1*4;
-    std::cout << "Matrix 4" << std::endl;
+    Matrix m4 = m1 * 4;
+    std::cout << "Matrix 1 * 4" << std::endl;
     m4.display();
+
+    Matrix m5 = m1 + m2;
+    std::cout << "Matrix 1 + matrix 2" << std::endl;
+    m5.display();
+
+    Matrix m6 = m1 - m2;
+    std::cout << "Matrix 1 - matrix 2" << std::endl;
+    m6.display();
 
     return 0; 
 }
