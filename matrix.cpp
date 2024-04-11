@@ -122,3 +122,14 @@ Matrix Matrix::operator-(Matrix& m) const{
         return result;
     }
 }
+
+//Transpose
+Matrix Matrix::transpose() const{
+    Matrix result(size.at(1), size.at(0));
+    for(int i = 0; i < size.at(0); i++){
+        for(int j = 0; j < size.at(1); j++){
+            result.data[j][i] = data[i][j];
+        }
+    }
+    return result;
+}

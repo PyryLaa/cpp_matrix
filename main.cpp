@@ -30,5 +30,17 @@ int main(){
     std::cout << "Matrix 1 - matrix 2" << std::endl;
     m6.display();
 
+    Matrix m7 = m1.transpose();
+    std::cout << "Matrix 1 transposed" << std::endl;
+    m7.display();
+
+    Matrix m8(5, 4);
+    m8.populate();
+    Matrix m9 = m8.transpose();
+    std::cout << "Matrix 8" << std::endl;
+    m8.display();
+    std::cout << "Matrix 8 transposed" << std::endl;
+    m9.display();
+
     return 0; 
 }

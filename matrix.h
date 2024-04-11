@@ -21,7 +21,7 @@ class Matrix{
   Matrix operator+(Matrix& m) const;
   Matrix operator-(Matrix& m) const;
 
-  //Matrix transpose(Matrix& m);
+  Matrix transpose() const;
   
 
   
